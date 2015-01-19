@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Touch controller</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript" src="/jquery.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		
+		<link rel="stylesheet" href="/flipclock/flipclock.css">
+		<script src="/flipclock/flipclock.js"></script>	
+
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="buttons.css" />
+		<script type="text/javascript" src="/screensaver.js"></script>
+		<script type="text/javascript" src="/controller.js"></script>
+	</head>
+	<body>
+		<div id="touchContainer">
+			<div id="screensaverContainer" style="display:none;">
+				<canvas id="screensaverCanvas"></canvas>
+				<div id="screensaverClockContainer">
+					<div id="screensaverClock"></div>
+				</div>
+			</div>
+
+			<div class="column"> <!--column 1 -->
+				<div class="group">
+					<h1>Power</h1>
+					<button class="orange tall" id="btnMasterPower">Desk Master Power</button>
+					<button class="orange tall" data-event="lightToggle">Light</button>
+					<button data-toggle="linkLightDesk">Link light &amp; desk</button>
+				</div>
+			
+				<div class="group">
+					<h1>Spotify</h1>
+					<button data-event="spotifyPlay" class="yellow half">Play</button>
+					<button data-event="spotifyPause" class="yellow half last">Pause</button>
+					<div class="clear"></div>
+					<button data-event="spotifyPrev" class="half">Prev</button>
+					<button data-event="spotifyNext" class="half last">Next</button>
+					<div class="clear"></div>
+					<button data-event="spotifyVolDown" class="half">Volume Down</button>
+					<button data-event="spotifyVoUp" class="half last">Volume Up</button>
+					<div class="clear"></div>
+				</div>
+
+				
+			</div>
+
+
+			<div class="column"> <!--column 2 -->
+				<div class="clock"></div>
+				<div class="group">
+					<h1>Screensaver</h1>
+					<button data-toggle="autoScreensaver">Auto Screensaver</button>
+					<button data-toggle="clockOverlay">Clock overlay</button>
+					<button id="btnActivateScreensaver">Activate Screensaver</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
